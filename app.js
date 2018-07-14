@@ -7,20 +7,13 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
-
-// var port = 5000;
+var app = express();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD + '@ds161529.mlab.com:61529/pixels');
-
+mongoose.connect('mongodb://elizabeth123:elizabeth123@ds137611.mlab.com:37611/express-pixel-app');
 
 var index = require('./routes/index');
 var drawingsRouter = require('./routes/drawings');
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
