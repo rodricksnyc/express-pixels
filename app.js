@@ -7,6 +7,11 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+console.log("Listening on Port 3000");
+});
+
 var app = express();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://elizabeth123:elizabeth123@ds137611.mlab.com:37611/express-pixel-app');
@@ -36,7 +41,6 @@ app.use(methodOverride(function (req, res) {
     return method
   }
 }));
-
 
 app.use('/', index);
 app.use('/drawings', drawingsRouter);
