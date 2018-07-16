@@ -18,22 +18,22 @@
       <p class="text-center">
           <a class="aqua" href="/drawings/new">Create a New Drawing</a>
       </p>
-    
-        <div class="container">
-            <div class="row">
-                    <% for (var i = 0; i < drawings.length; i++) { %>
-                        <% let drawing = drawings[i]; %>
-                            <div class="col-sm-3">
-                                <div>
-                                        <a href="/drawings/<%= drawing._id %>"><img class="image_preview" src=" <%=drawing.image %>"></a>
 
-                                </div>
+<div class="container">
+  <div class="row">
+      <% for (var i = 0; i < drawings.length; i++) { %>
+          <% let drawing = drawings[i]; %>
+            <div class="col-sm-3">
+              <div>
+              <a href="/drawings/<%= drawing._id %>"><img class="image_preview" src=" <%=drawing.image %>"></a>
 
-                            </div>
-                    <% } %>
+                  </div>
+
             </div>
-        </div>
-    </body>
+          <% } %>
+            </div>
+  </div>
+  </body>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 
