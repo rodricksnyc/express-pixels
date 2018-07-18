@@ -69,6 +69,11 @@ h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 55px;
 }
+.sizeSelector {
+  display:flex;
+  flex-direction: column;
+  width:150px;
+}
 
 a {
 font-size: 38px;
